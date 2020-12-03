@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "nine_armory:items/beutifuel"
+    "layer0": "nine_armory:items/blazingsword_2"
   }
 }
