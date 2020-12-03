@@ -3,7 +3,7 @@
   "_type": "tool",
   "definition": {
     "renderType": 0,
-    "texture": "blazingflamesword",
+    "texture": "beutifuel",
     "customModelName": "Normal",
     "name": "Blaze",
     "specialInfo": [],
@@ -18,7 +18,7 @@
     "damageVsEntity": 4.0,
     "usageCount": 100,
     "blocksAffected": [],
-    "hasGlow": false,
+    "hasGlow": true,
     "repairItems": [],
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false

@@ -9,12 +9,22 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "blaze"
+    },
+    {
+      "name": "Bananaswordbanananananananana",
+      "type": "item",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bananaswordbanananananananana"
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "en_us": {
+      "item.nine_armory.bananaswordbanananananananana": "Bananaswordbanananananananana",
       "item.nine_armory.blaze": "Blaze"
     }
   },
