@@ -18,6 +18,23 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "bananaswordbanananananananana"
+    },
+    {
+      "name": "Bananashoot",
+      "type": "procedure",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bananashoot",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
