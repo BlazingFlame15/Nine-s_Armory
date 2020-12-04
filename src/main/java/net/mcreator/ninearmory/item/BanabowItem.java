@@ -187,7 +187,7 @@ public class BanabowItem extends NineArmoryModElements.ModElement {
 			GlStateManager.translatef((float) d, (float) d1, (float) d2);
 			GlStateManager.rotatef(f, 0, 1, 0);
 			GlStateManager.rotatef(90f - bullet.prevRotationPitch - (bullet.rotationPitch - bullet.prevRotationPitch) * f1, 1, 0, 0);
-			EntityModel model = new Modelbanana_arrow();
+			EntityModel model = new Modelbanana_ammo();
 			model.render(bullet, 0, 0, 0, 0, 0, 0.0625f);
 			GlStateManager.popMatrix();
 		}
@@ -201,41 +201,18 @@ public class BanabowItem extends NineArmoryModElements.ModElement {
 	// Made with Blockbench 3.7.4
 	// Exported for Minecraft version 1.14
 	// Paste this class into your mod and generate all required imports
-	public static class Modelbanana_arrow extends EntityModel {
+	public static class Modelbanana_ammo extends EntityModel {
 		private final RendererModel bb_main;
-		public Modelbanana_arrow() {
+		public Modelbanana_ammo() {
 			textureWidth = 16;
 			textureHeight = 16;
 			bb_main = new RendererModel(this);
 			bb_main.setRotationPoint(0.0F, 24.0F, 0.0F);
-			bb_main.cubeList.add(new ModelBox(bb_main, 4, 13, -2.0F, -1.0F, 0.0F, 1, 1, 1, 0.0F, false));
-			bb_main.cubeList.add(new ModelBox(bb_main, 6, 9, 0.0F, -1.0F, 0.0F, 1, 1, 1, 0.0F, false));
-			bb_main.cubeList.add(new ModelBox(bb_main, 5, 9, -3.0F, -1.0F, 0.0F, 1, 1, 1, 0.0F, false));
-			bb_main.cubeList.add(new ModelBox(bb_main, 6, 9, 1.0F, -1.0F, 0.0F, 1, 1, 1, 0.0F, false));
-			bb_main.cubeList.add(new ModelBox(bb_main, 6, 9, 1.0F, -2.0F, 0.0F, 1, 1, 1, 0.0F, false));
-			bb_main.cubeList.add(new ModelBox(bb_main, 7, 9, 2.0F, -2.0F, 0.0F, 1, 1, 1, 0.0F, false));
-			bb_main.cubeList.add(new ModelBox(bb_main, 12, 14, 2.0F, -3.0F, 0.0F, 1, 1, 1, 0.0F, false));
-			bb_main.cubeList.add(new ModelBox(bb_main, 0, 0, -1.0F, -1.0F, 0.0F, 1, 1, 1, 0.0F, false));
-			bb_main.cubeList.add(new ModelBox(bb_main, 0, 0, -4.0F, -1.0F, 0.0F, 1, 1, 1, 0.0F, false));
-			bb_main.cubeList.add(new ModelBox(bb_main, 0, 0, -4.0F, -2.0F, 0.0F, 1, 1, 1, 0.0F, false));
-			bb_main.cubeList.add(new ModelBox(bb_main, 0, 0, -5.0F, -2.0F, 0.0F, 1, 1, 1, 0.0F, false));
-			bb_main.cubeList.add(new ModelBox(bb_main, 0, 0, -6.0F, -2.0F, 0.0F, 1, 1, 1, 0.0F, false));
-			bb_main.cubeList.add(new ModelBox(bb_main, 0, 0, -6.0F, -3.0F, 0.0F, 1, 1, 1, 0.0F, false));
-			bb_main.cubeList.add(new ModelBox(bb_main, 0, 0, -1.0F, -1.0F, -1.0F, 1, 1, 1, 0.0F, false));
-			bb_main.cubeList.add(new ModelBox(bb_main, 0, 0, -2.0F, -1.0F, -1.0F, 1, 1, 1, 0.0F, false));
-			bb_main.cubeList.add(new ModelBox(bb_main, 0, 0, 0.0F, -1.0F, -1.0F, 1, 1, 1, 0.0F, false));
-			bb_main.cubeList.add(new ModelBox(bb_main, 0, 0, -3.0F, -1.0F, -1.0F, 1, 1, 1, 0.0F, false));
-			bb_main.cubeList.add(new ModelBox(bb_main, 0, 0, -4.0F, -1.0F, -1.0F, 1, 1, 1, 0.0F, false));
-			bb_main.cubeList.add(new ModelBox(bb_main, 0, 0, -4.0F, -2.0F, -1.0F, 1, 1, 1, 0.0F, false));
-			bb_main.cubeList.add(new ModelBox(bb_main, 0, 0, 1.0F, -1.0F, -1.0F, 1, 1, 1, 0.0F, false));
-			bb_main.cubeList.add(new ModelBox(bb_main, 0, 0, 1.0F, -2.0F, -1.0F, 1, 1, 1, 0.0F, false));
-			bb_main.cubeList.add(new ModelBox(bb_main, 0, 0, 2.0F, -2.0F, -1.0F, 1, 1, 1, 0.0F, false));
-			bb_main.cubeList.add(new ModelBox(bb_main, 0, 0, 2.0F, -3.0F, -1.0F, 1, 1, 1, 0.0F, false));
-			bb_main.cubeList.add(new ModelBox(bb_main, 0, 0, -5.0F, -2.0F, -1.0F, 1, 1, 1, 0.0F, false));
-			bb_main.cubeList.add(new ModelBox(bb_main, 0, 0, -6.0F, -2.0F, -1.0F, 1, 1, 1, 0.0F, false));
-			bb_main.cubeList.add(new ModelBox(bb_main, 0, 0, -6.0F, -3.0F, -1.0F, 1, 1, 1, 0.0F, false));
-			bb_main.cubeList.add(new ModelBox(bb_main, 12, 14, 3.0F, -3.0F, 0.0F, 1, 1, 1, 0.0F, true));
-			bb_main.cubeList.add(new ModelBox(bb_main, 12, 14, 3.0F, -4.0F, 0.0F, 1, 1, 1, 0.0F, false));
+			bb_main.cubeList.add(new ModelBox(bb_main, 0, 0, -4.0F, -2.0F, 0.0F, 7, 2, 1, 0.0F, false));
+			bb_main.cubeList.add(new ModelBox(bb_main, 0, 0, 4.0F, -2.0F, 1.0F, -2, 2, 1, 0.0F, false));
+			bb_main.cubeList.add(new ModelBox(bb_main, 12, 14, 3.0F, -2.0F, 2.0F, 1, 2, 1, 0.0F, false));
+			bb_main.cubeList.add(new ModelBox(bb_main, 0, 0, -6.0F, -2.0F, 1.0F, 3, 2, 1, 0.0F, false));
+			bb_main.cubeList.add(new ModelBox(bb_main, 0, 0, -7.0F, -2.0F, 2.0F, 2, 2, 1, 0.0F, false));
 		}
 
 		@Override
