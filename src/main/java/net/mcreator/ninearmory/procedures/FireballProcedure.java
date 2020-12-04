@@ -23,7 +23,7 @@ public class FireballProcedure extends NineArmoryModElements.ModElement {
 			Entity _ent = entity;
 			if (!_ent.world.isRemote && _ent.world.getServer() != null) {
 				_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-						"/summon Fireball ~ ~2 ~ {ExplosionPower:2,direction:[0.0,0.0,0.0]}");
+						"/summon minecraft:fireball  ~ ~2 ~ {ExplosionPower:2,direction:[0.0,1.0,0.0]} ");
 			}
 		}
 	}
