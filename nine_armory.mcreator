@@ -53,6 +53,15 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "banabow"
+    },
+    {
+      "name": "Armory",
+      "type": "tab",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "armory"
     }
   ],
   "variable_elements": [],
@@ -60,7 +69,10 @@
   "language_map": {
     "en_us": {
       "item.nine_armory.bananaswordbanananananananana": "Bananaswordbanananananananana",
-      "item.nine_armory.blaze": "Blaze"
+      "item.nine_armory.blaze": "Blaze",
+      "item.nine_armory.banabow": "Banabow",
+      "block.nine_armory.beginningbrick": "Beginningbrick",
+      "itemGroup.tabarmory": "Armory"
     }
   },
   "workspaceSettings": {

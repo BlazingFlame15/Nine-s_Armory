@@ -8,7 +8,7 @@
     "name": "Blaze",
     "specialInfo": [],
     "creativeTab": {
-      "value": "COMBAT"
+      "value": "CUSTOM:Armory"
     },
     "toolType": "Sword",
     "harvestLevel": 1,
@@ -25,9 +25,6 @@
       }
     ],
     "stayInGridWhenCrafting": false,
-    "damageOnCrafting": false,
-    "onRightClickedInAir": {
-      "name": "Fireball"
-    }
+    "damageOnCrafting": false
   }
 }
