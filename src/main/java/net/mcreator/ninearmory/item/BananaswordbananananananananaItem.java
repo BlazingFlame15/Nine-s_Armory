@@ -92,6 +92,7 @@ public class BananaswordbananananananananaItem extends NineArmoryModElements.Mod
 			double z = entity.posZ;
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
 				$_dependencies.put("world", world);
 				BananashootProcedure.executeProcedure($_dependencies);
 			}
@@ -111,6 +112,7 @@ public class BananaswordbananananananananaItem extends NineArmoryModElements.Mod
 			ItemStack itemstack = context.getItem();
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
 				$_dependencies.put("world", world);
 				BananashootProcedure.executeProcedure($_dependencies);
 			}

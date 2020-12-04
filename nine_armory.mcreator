@@ -37,23 +37,6 @@
       }
     },
     {
-      "name": "Fireball",
-      "type": "procedure",
-      "sortid": 4,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "fireball",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
       "name": "Beginningbrick",
       "type": "block",
       "sortid": 5,
@@ -61,6 +44,15 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "beginningbrick"
+    },
+    {
+      "name": "Banabow",
+      "type": "gun",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "banabow"
     }
   ],
   "variable_elements": [],
@@ -68,8 +60,7 @@
   "language_map": {
     "en_us": {
       "item.nine_armory.bananaswordbanananananananana": "Bananaswordbanananananananana",
-      "item.nine_armory.blaze": "Blaze",
-      "block.nine_armory.beginningbrick": "Beginningbrick"
+      "item.nine_armory.blaze": "Blaze"
     }
   },
   "workspaceSettings": {
