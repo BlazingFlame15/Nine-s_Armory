@@ -6,13 +6,14 @@ import net.minecraftforge.common.MinecraftForge;
 
 import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
-import net.minecraft.entity.projectile.ArrowEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 
+import net.mcreator.ninearmory.item.BanabowItem;
 import net.mcreator.ninearmory.NineArmoryModElements;
 
+import java.util.Random;
 import java.util.Map;
 import java.util.HashMap;
 
@@ -37,11 +38,7 @@ public class BananashootProcedure extends NineArmoryModElements.ModElement {
 		Entity entity = (Entity) dependencies.get("entity");
 		IWorld world = (IWorld) dependencies.get("world");
 		if (world instanceof World && !world.getWorld().isRemote && entity instanceof LivingEntity) {
-			ArrowEntity entityToSpawn = new ArrowEntity(world.getWorld(), (LivingEntity) entity);
-			entityToSpawn.shoot(entity.getLookVec().x, entity.getLookVec().y, entity.getLookVec().z, (float) 1, 0);
-			entityToSpawn.setDamage((float) 5);
-			entityToSpawn.setKnockbackStrength((int) 5);
-			world.addEntity(entityToSpawn);
+			BanabowItem.shoot(world.getWorld(), (LivingEntity) entity, new Random(), (float) 1, (float) 5, (int) 5);
 		}
 	}
 
