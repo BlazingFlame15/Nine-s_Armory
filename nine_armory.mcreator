@@ -52,6 +52,15 @@
           }
         ]
       }
+    },
+    {
+      "name": "Beginningbrick",
+      "type": "block",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "beginningbrick"
     }
   ],
   "variable_elements": [],
@@ -59,7 +68,8 @@
   "language_map": {
     "en_us": {
       "item.nine_armory.bananaswordbanananananananana": "Bananaswordbanananananananana",
-      "item.nine_armory.blaze": "Blaze"
+      "item.nine_armory.blaze": "Blaze",
+      "block.nine_armory.beginningbrick": "Beginningbrick"
     }
   },
   "workspaceSettings": {
