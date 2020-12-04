@@ -49,7 +49,7 @@
       "name": "Banabow",
       "type": "gun",
       "sortid": 4,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "ids": {},
       "registry_name": "banabow"
@@ -58,7 +58,7 @@
       "name": "Armory",
       "type": "tab",
       "sortid": 6,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "ids": {},
       "registry_name": "armory"
