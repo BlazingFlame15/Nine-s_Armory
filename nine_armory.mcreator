@@ -30,11 +30,24 @@
       "metadata": {
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "world",
             "type": "world"
           }
         ]
       }
+    },
+    {
+      "name": "Banabow",
+      "type": "gun",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "banabow"
     }
   ],
   "variable_elements": [],
@@ -42,7 +55,8 @@
   "language_map": {
     "en_us": {
       "item.nine_armory.bananaswordbanananananananana": "Bananaswordbanananananananana",
-      "item.nine_armory.blaze": "Blaze"
+      "item.nine_armory.blaze": "Blaze",
+      "item.nine_armory.banabow": "Banabow"
     }
   },
   "workspaceSettings": {
