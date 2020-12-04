@@ -62,6 +62,36 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "armory"
+    },
+    {
+      "name": "Fireballarrow",
+      "type": "gun",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "fireballarrow"
+    },
+    {
+      "name": "Fireball",
+      "type": "procedure",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "fireball",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -69,6 +99,7 @@
   "language_map": {
     "en_us": {
       "item.nine_armory.bananaswordbanananananananana": "Bananaswordbanananananananana",
+      "item.nine_armory.fireballarrow": "Fireballarrow",
       "item.nine_armory.blaze": "Blaze",
       "item.nine_armory.banabow": "Banabow",
       "block.nine_armory.beginningbrick": "Beginningbrick",
