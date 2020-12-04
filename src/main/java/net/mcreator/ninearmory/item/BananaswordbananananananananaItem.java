@@ -14,7 +14,6 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.item.Rarity;
 import net.minecraft.item.ItemUseContext;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.entity.player.PlayerEntity;
@@ -24,6 +23,7 @@ import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.block.BlockState;
 
 import net.mcreator.ninearmory.procedures.BananashootProcedure;
+import net.mcreator.ninearmory.itemgroup.ArmoryItemGroup;
 import net.mcreator.ninearmory.NineArmoryModElements;
 
 import java.util.Map;
@@ -46,7 +46,7 @@ public class BananaswordbananananananananaItem extends NineArmoryModElements.Mod
 	}
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(ItemGroup.COMBAT).maxStackSize(1).rarity(Rarity.EPIC));
+			super(new Item.Properties().group(ArmoryItemGroup.tab).maxStackSize(1).rarity(Rarity.EPIC));
 			setRegistryName("bananaswordbanananananananana");
 		}
 
@@ -92,7 +92,6 @@ public class BananaswordbananananananananaItem extends NineArmoryModElements.Mod
 			double z = entity.posZ;
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
 				$_dependencies.put("world", world);
 				BananashootProcedure.executeProcedure($_dependencies);
 			}
@@ -112,7 +111,6 @@ public class BananaswordbananananananananaItem extends NineArmoryModElements.Mod
 			ItemStack itemstack = context.getItem();
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
 				$_dependencies.put("world", world);
 				BananashootProcedure.executeProcedure($_dependencies);
 			}

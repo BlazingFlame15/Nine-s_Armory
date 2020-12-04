@@ -53,6 +53,15 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "banabow"
+    },
+    {
+      "name": "Armory",
+      "type": "tab",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "armory"
     }
   ],
   "variable_elements": [],

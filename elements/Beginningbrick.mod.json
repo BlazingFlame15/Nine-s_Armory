@@ -26,7 +26,7 @@
     "Mz": 1.0,
     "name": "Beginningbrick",
     "specialInfo": [],
-    "hardness": 1.0,
+    "hardness": 1.3,
     "resistance": 10.0,
     "hasGravity": false,
     "isWaterloggable": false,
@@ -59,11 +59,11 @@
     "flammability": 0,
     "fireSpreadSpeed": 0,
     "isLadder": false,
-    "slipperiness": 0.6,
+    "slipperiness": 1.4000000000000001,
     "reactionToPushing": "NORMAL",
     "isNotColidable": false,
     "soundOnStep": {
-      "value": "GROUND"
+      "value": "METAL"
     },
     "luminance": 0.0,
     "unbreakable": false,
