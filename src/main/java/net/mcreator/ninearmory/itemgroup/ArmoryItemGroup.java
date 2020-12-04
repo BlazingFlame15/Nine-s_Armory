@@ -1,9 +1,17 @@
 
 package net.mcreator.ninearmory.itemgroup;
 
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.api.distmarker.Dist;
+
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemGroup;
+
+import net.mcreator.ninearmory.item.BlazeItem;
+import net.mcreator.ninearmory.NineArmoryModElements;
+
 @NineArmoryModElements.ModElement.Tag
 public class ArmoryItemGroup extends NineArmoryModElements.ModElement {
-
 	public ArmoryItemGroup(NineArmoryModElements instance) {
 		super(instance, 6);
 	}
@@ -23,7 +31,5 @@ public class ArmoryItemGroup extends NineArmoryModElements.ModElement {
 			}
 		}.setBackgroundImageName("item_search.png");
 	}
-
 	public static ItemGroup tab;
-
 }

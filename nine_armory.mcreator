@@ -49,7 +49,7 @@
       "name": "Banabow",
       "type": "gun",
       "sortid": 4,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "ids": {},
       "registry_name": "banabow"
@@ -58,7 +58,7 @@
       "name": "Armory",
       "type": "tab",
       "sortid": 6,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "ids": {},
       "registry_name": "armory"
@@ -101,7 +101,8 @@
       "item.nine_armory.bananaswordbanananananananana": "Bananaswordbanananananananana",
       "item.nine_armory.fireballarrow": "Fireballarrow",
       "item.nine_armory.blaze": "Blaze",
-      "item.nine_armory.banabow": "Banabow"
+      "item.nine_armory.banabow": "Banabow",
+      "itemGroup.tabarmory": "Armory"
     }
   },
   "workspaceSettings": {

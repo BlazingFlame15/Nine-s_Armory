@@ -31,7 +31,7 @@
     "bulletItemTexture": {
       "value": "CUSTOM:Bananaswordbanananananananana"
     },
-    "bulletModel": "Modelbanana_ammo",
+    "bulletModel": "Modelbanana_arrow",
     "customBulletModelTexture": "banana.png"
   }
 }
