@@ -33,12 +33,17 @@ import net.minecraft.entity.IRendersAsItem;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.Entity;
-import net.minecraft.client.renderer.entity.SpriteRenderer;
-import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.model.ModelBox;
+import net.minecraft.client.renderer.entity.model.RendererModel;
+import net.minecraft.client.renderer.entity.model.EntityModel;
+import net.minecraft.client.renderer.entity.EntityRendererManager;
+import net.minecraft.client.renderer.entity.EntityRenderer;
 
 import net.mcreator.ninearmory.NineArmoryModElements;
 
 import java.util.Random;
+
+import com.mojang.blaze3d.platform.GlStateManager;
 
 import com.google.common.collect.Multimap;
 
@@ -63,8 +68,7 @@ public class BanabowItem extends NineArmoryModElements.ModElement {
 	@Override
 	@OnlyIn(Dist.CLIENT)
 	public void init(FMLCommonSetupEvent event) {
-		RenderingRegistry.registerEntityRenderingHandler(ArrowCustomEntity.class,
-				renderManager -> new SpriteRenderer(renderManager, Minecraft.getInstance().getItemRenderer()));
+		RenderingRegistry.registerEntityRenderingHandler(ArrowCustomEntity.class, renderManager -> new CustomRender(renderManager));
 	}
 	public static class ItemRanged extends Item {
 		public ItemRanged() {
@@ -167,6 +171,86 @@ public class BanabowItem extends NineArmoryModElements.ModElement {
 			if (this.inGround) {
 				this.remove();
 			}
+		}
+	}
+
+	public static class CustomRender extends EntityRenderer<ArrowCustomEntity> {
+		private static final ResourceLocation texture = new ResourceLocation("nine_armory:textures/banana.png");
+		public CustomRender(EntityRendererManager renderManager) {
+			super(renderManager);
+		}
+
+		@Override
+		public void doRender(ArrowCustomEntity bullet, double d, double d1, double d2, float f, float f1) {
+			this.bindEntityTexture(bullet);
+			GlStateManager.pushMatrix();
+			GlStateManager.translatef((float) d, (float) d1, (float) d2);
+			GlStateManager.rotatef(f, 0, 1, 0);
+			GlStateManager.rotatef(90f - bullet.prevRotationPitch - (bullet.rotationPitch - bullet.prevRotationPitch) * f1, 1, 0, 0);
+			EntityModel model = new Modelbanana_arrow();
+			model.render(bullet, 0, 0, 0, 0, 0, 0.0625f);
+			GlStateManager.popMatrix();
+		}
+
+		@Override
+		protected ResourceLocation getEntityTexture(ArrowCustomEntity entity) {
+			return texture;
+		}
+	}
+
+	// Made with Blockbench 3.7.4
+	// Exported for Minecraft version 1.14
+	// Paste this class into your mod and generate all required imports
+	public static class Modelbanana_arrow extends EntityModel {
+		private final RendererModel bb_main;
+		public Modelbanana_arrow() {
+			textureWidth = 16;
+			textureHeight = 16;
+			bb_main = new RendererModel(this);
+			bb_main.setRotationPoint(0.0F, 24.0F, 0.0F);
+			bb_main.cubeList.add(new ModelBox(bb_main, 4, 13, -2.0F, -1.0F, 0.0F, 1, 1, 1, 0.0F, false));
+			bb_main.cubeList.add(new ModelBox(bb_main, 6, 9, 0.0F, -1.0F, 0.0F, 1, 1, 1, 0.0F, false));
+			bb_main.cubeList.add(new ModelBox(bb_main, 5, 9, -3.0F, -1.0F, 0.0F, 1, 1, 1, 0.0F, false));
+			bb_main.cubeList.add(new ModelBox(bb_main, 6, 9, 1.0F, -1.0F, 0.0F, 1, 1, 1, 0.0F, false));
+			bb_main.cubeList.add(new ModelBox(bb_main, 6, 9, 1.0F, -2.0F, 0.0F, 1, 1, 1, 0.0F, false));
+			bb_main.cubeList.add(new ModelBox(bb_main, 7, 9, 2.0F, -2.0F, 0.0F, 1, 1, 1, 0.0F, false));
+			bb_main.cubeList.add(new ModelBox(bb_main, 12, 14, 2.0F, -3.0F, 0.0F, 1, 1, 1, 0.0F, false));
+			bb_main.cubeList.add(new ModelBox(bb_main, 0, 0, -1.0F, -1.0F, 0.0F, 1, 1, 1, 0.0F, false));
+			bb_main.cubeList.add(new ModelBox(bb_main, 0, 0, -4.0F, -1.0F, 0.0F, 1, 1, 1, 0.0F, false));
+			bb_main.cubeList.add(new ModelBox(bb_main, 0, 0, -4.0F, -2.0F, 0.0F, 1, 1, 1, 0.0F, false));
+			bb_main.cubeList.add(new ModelBox(bb_main, 0, 0, -5.0F, -2.0F, 0.0F, 1, 1, 1, 0.0F, false));
+			bb_main.cubeList.add(new ModelBox(bb_main, 0, 0, -6.0F, -2.0F, 0.0F, 1, 1, 1, 0.0F, false));
+			bb_main.cubeList.add(new ModelBox(bb_main, 0, 0, -6.0F, -3.0F, 0.0F, 1, 1, 1, 0.0F, false));
+			bb_main.cubeList.add(new ModelBox(bb_main, 0, 0, -1.0F, -1.0F, -1.0F, 1, 1, 1, 0.0F, false));
+			bb_main.cubeList.add(new ModelBox(bb_main, 0, 0, -2.0F, -1.0F, -1.0F, 1, 1, 1, 0.0F, false));
+			bb_main.cubeList.add(new ModelBox(bb_main, 0, 0, 0.0F, -1.0F, -1.0F, 1, 1, 1, 0.0F, false));
+			bb_main.cubeList.add(new ModelBox(bb_main, 0, 0, -3.0F, -1.0F, -1.0F, 1, 1, 1, 0.0F, false));
+			bb_main.cubeList.add(new ModelBox(bb_main, 0, 0, -4.0F, -1.0F, -1.0F, 1, 1, 1, 0.0F, false));
+			bb_main.cubeList.add(new ModelBox(bb_main, 0, 0, -4.0F, -2.0F, -1.0F, 1, 1, 1, 0.0F, false));
+			bb_main.cubeList.add(new ModelBox(bb_main, 0, 0, 1.0F, -1.0F, -1.0F, 1, 1, 1, 0.0F, false));
+			bb_main.cubeList.add(new ModelBox(bb_main, 0, 0, 1.0F, -2.0F, -1.0F, 1, 1, 1, 0.0F, false));
+			bb_main.cubeList.add(new ModelBox(bb_main, 0, 0, 2.0F, -2.0F, -1.0F, 1, 1, 1, 0.0F, false));
+			bb_main.cubeList.add(new ModelBox(bb_main, 0, 0, 2.0F, -3.0F, -1.0F, 1, 1, 1, 0.0F, false));
+			bb_main.cubeList.add(new ModelBox(bb_main, 0, 0, -5.0F, -2.0F, -1.0F, 1, 1, 1, 0.0F, false));
+			bb_main.cubeList.add(new ModelBox(bb_main, 0, 0, -6.0F, -2.0F, -1.0F, 1, 1, 1, 0.0F, false));
+			bb_main.cubeList.add(new ModelBox(bb_main, 0, 0, -6.0F, -3.0F, -1.0F, 1, 1, 1, 0.0F, false));
+			bb_main.cubeList.add(new ModelBox(bb_main, 12, 14, 3.0F, -3.0F, 0.0F, 1, 1, 1, 0.0F, true));
+			bb_main.cubeList.add(new ModelBox(bb_main, 12, 14, 3.0F, -4.0F, 0.0F, 1, 1, 1, 0.0F, false));
+		}
+
+		@Override
+		public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
+			bb_main.render(f5);
+		}
+
+		public void setRotationAngle(RendererModel modelRenderer, float x, float y, float z) {
+			modelRenderer.rotateAngleX = x;
+			modelRenderer.rotateAngleY = y;
+			modelRenderer.rotateAngleZ = z;
+		}
+
+		public void setRotationAngles(Entity e, float f, float f1, float f2, float f3, float f4, float f5) {
+			super.setRotationAngles(e, f, f1, f2, f3, f4, f5);
 		}
 	}
 	public static ArrowCustomEntity shoot(World world, LivingEntity entity, Random random, float power, double damage, int knockback) {
